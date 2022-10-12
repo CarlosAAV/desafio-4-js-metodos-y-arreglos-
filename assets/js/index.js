@@ -110,7 +110,7 @@ function validarCampos() {
   }else{
 
     let nuevoListado = propiedadesJSON.filter((propiedad )=>{
-      return propiedad.rooms == parseInt(numCuartos.value) && propiedad.m > parseInt(metrosDesde.value) && propiedad.m < parseInt(metrosHasta.value)
+      return propiedad.rooms == parseInt(numCuartos.value) && propiedad.m >= parseInt(metrosDesde.value) && propiedad.m <= parseInt(metrosHasta.value)
 
     })
     console.log(nuevoListado)
