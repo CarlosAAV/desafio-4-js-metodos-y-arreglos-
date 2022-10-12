@@ -52,10 +52,17 @@ function clearCampos() {
   let numCuartos = document.getElementById("num-cuartos");
   let metrosDesde = document.getElementById("metros-desde");
   let metrosHasta = document.getElementById("metros-hasta");
+  let campoUno = document.getElementById("campo1")
+  let campoDos = document.getElementById("campo2")
+  let campoTres = document.getElementById("campo3")
 
   numCuartos.value = ""
   metrosDesde.value = ""
   metrosHasta.value = ""
+  campoUno.style.display = 'none'
+  campoDos.style.display = 'none'
+  campoTres.style.display = 'none' 
+  
   cargarPropiedades(propiedadesJSON)
 
 }
