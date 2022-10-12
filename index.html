@@ -17,29 +17,29 @@
         <section>
 
             <div>
-                <p>Cantidad de cuartos:</p> <input min="1" class="form-control w-50 m-auto" type="number"
-                    id="num-cuartos">
-
+                <p>Cantidad de cuartos:</p> <input min="1" class="form-control w-50 m-auto" type="number"id="num-cuartos">
+                <span style="display:none ; color: rgb(224, 26, 26);" id="campo1">(*) campo obligatorio</span>
             </div>
             <div>
                 <span>Metros cuadrados </span>
                 <div class="d-flex">
                     <div class="me-4">
                         <p>desde: </p><input min="1" class="form-control " type="number" id="metros-desde">
+                        <span style="display:none ; color: rgb(224, 26, 26);" id="campo2">(*) campo obligatorio</span>
 
                     </div>
                     <div>
                         <p> hasta:</p>
                         <input min="1" class="form-control " type="number" id="metros-hasta">
-
+                        <span style="display:none ; color: rgb(224, 26, 26);" id="campo3">(*) campo obligatorio</span>
                     </div>
                 </div>
             </div>
 
         </section>
         <div style="display: flex; flex-direction:column;">
-        <button class="btn btn-warning" id="buscar" style="margin-bottom: 10px;">Buscar</button>
-        <button class="btn btn-info" id="buscar" onclick="clearCampos()">refresh</button> 
+        <button class="btn btn-warning" id="buscar" style="margin-bottom: 10px; color:white; font-size: 20px;"><strong>Buscar</strong></button>
+        <button class="btn btn-info" id="buscar" onclick="clearCampos()" style="color:white; font-size:20px;"><strong>refresh</strong></button> 
         </div>    
     </nav>
 

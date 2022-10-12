@@ -48,12 +48,12 @@ const propiedadesJSON = [
     m: 500
   }
 ];
-function clearCampos(){
+function clearCampos() {
   let numCuartos = document.getElementById("num-cuartos");
   let metrosDesde = document.getElementById("metros-desde");
   let metrosHasta = document.getElementById("metros-hasta");
 
-  numCuartos.value = "" 
+  numCuartos.value = ""
   metrosDesde.value = ""
   metrosHasta.value = ""
   cargarPropiedades(propiedadesJSON)
@@ -98,18 +98,22 @@ function validarCampos() {
   if (numCuartos.value == '') {
     alert('campo obligatorio')
     numCuartos.focus()
+    document.querySelector('#campo1').style.display = 'inline';
     return false
+
   } else if (metrosDesde.value == '') {
     alert('campo obligatorio')
     metrosDesde.focus()
+    document.querySelector('#campo2').style.display = 'inline';
     return false
   } else if (metrosHasta.value == '') {
     alert('campo obligatorio')
     metrosHasta.focus()
+    document.querySelector('#campo3').style.display = 'inline';
     return false
-  }else{
+  } else {
 
-    let nuevoListado = propiedadesJSON.filter((propiedad )=>{
+    let nuevoListado = propiedadesJSON.filter((propiedad) => {
       return propiedad.rooms == parseInt(numCuartos.value) && propiedad.m >= parseInt(metrosDesde.value) && propiedad.m <= parseInt(metrosHasta.value)
 
     })
