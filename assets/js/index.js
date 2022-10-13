@@ -96,13 +96,12 @@ function cargarPropiedades(listadoPropiedades) {
 
 
 //validacion formulario de filtrado
-function validarCampos() {
-  let numCuartos = document.getElementById("num-cuartos");
-  let metrosDesde = document.getElementById("metros-desde");
-  let metrosHasta = document.getElementById("metros-hasta");
+let numCuartos = document.getElementById("num-cuartos");
+let metrosDesde = document.getElementById("metros-desde");
+let metrosHasta = document.getElementById("metros-hasta");
 
-
-  if (numCuartos.value == '') {
+function validarCampos(cuartos, metrosDesde, metrosHasta) {
+  if (cuartos.value == '') {
     alert('campo obligatorio')
     numCuartos.focus()
     document.querySelector('#campo1').style.display = 'inline';
@@ -129,7 +128,12 @@ function validarCampos() {
   }
 }
 document.querySelector("#buscar").addEventListener('click', function () {
-  validarCampos();
+  validarCampos(numCuartos,metrosDesde,metrosHasta);
+});
+
+window.addEventListener('keydown', (event)=>{
+if (event.key === 'Enter'){
+  validarCampos(numCuartos,metrosDesde,metrosHasta)}
 });
 
 
