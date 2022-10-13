@@ -95,7 +95,7 @@ function cargarPropiedades(listadoPropiedades) {
 }
 
 
-//validacion formulario de filtrado
+//validacion formulario 
 let numCuartos = document.getElementById("num-cuartos");
 let metrosDesde = document.getElementById("metros-desde");
 let metrosHasta = document.getElementById("metros-hasta");
